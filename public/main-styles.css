@@ -1,0 +1,22 @@
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --text-color: rgb(31, 57, 78);
+    --text-header-color: rgb(55, 98, 133);
+}
+
+* {
+    text-align: center;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+#main-header {
+    text-align: center;
+    color: var(--text-header-color);
+}
+
+p.info {
+    color: var(--text-color);
+}
