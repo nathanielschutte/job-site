@@ -1,2 +1,2 @@
 # job-site
-personal website
+website with some of my apps and games
