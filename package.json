@@ -4,7 +4,7 @@
   "description": "website with cool projects",
   "main": "index.js",
   "scripts": {
-    "start": "MONGO_URI=mongodb+srv://nate:QNpFY6RFKD2R5ppj@cluster0.qq0wo.mongodb.net/jobsite?retryWrites=true&w=majority GOOGLE_CLIENT_ID=66771205540-0ifvton84pg0h64gfe753i5m13edmk6l.apps.googleusercontent.com GOOGLE_CLIENT_SECRET=06vg1Y4RtrUSyQZg58sxCFsb GUEST_OK=false NODE_ENV=deploy node server.js",
+    "start": "NODE_ENV=deploy node server.js",
     "dev": "cross-env NODE_ENV=dev nodemon server.js"
   },
   "keywords": [
