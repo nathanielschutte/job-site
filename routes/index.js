@@ -1,15 +1,18 @@
 const express = require('express');
 const router = express.Router();
 
-// GET /
+// GET / 
 router.get('/', (req, res) => {
-    //res.sendFile(path.join(__dirname, 'public', 'index.html'));
-    res.render('index.html');
+    res.render('dashboard', {
+        layout: 'main-layout'
+    });
 });
 
 // GET /game
 router.get('/game', (req, res) => {
-    
+    res.render('game', {
+        layout: "game-layout"
+    });
 });
 
 // GET /unknown

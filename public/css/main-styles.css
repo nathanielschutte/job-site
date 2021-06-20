@@ -1,0 +1,21 @@
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --text-color: rgb(31, 57, 78);
+    --text-header-color: rgb(55, 98, 133);
+}
+
+p {
+    margin: 10px 0 !important;
+}
+
+.dash-container {
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.game-container {
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+}
