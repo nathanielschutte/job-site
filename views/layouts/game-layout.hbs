@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="/css/main-styles.css">
     </head>
     <body>
+        {{> _header}}
         <div class="container game-container">
             <div class="card">
                 <div class="card-content">
@@ -18,6 +19,10 @@
             </div>
         </div>
 
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+        <script>
+            M.Sidenav.init(document.querySelector('.sidenav'));
+        </script>
     </body>
 </html>

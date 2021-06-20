@@ -2,13 +2,20 @@
     --bg-color: rgb(255, 255, 255);
     --text-color: rgb(31, 57, 78);
     --text-header-color: rgb(55, 98, 133);
+    --text-error: rgb(173, 79, 79);
 }
 
 p {
     margin: 10px 0 !important;
 }
 
-.dash-container {
+.login-container {
+    width: 360px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.home-container {
     width: 400px;
     margin-top: 50px;
     text-align: center;
@@ -18,4 +25,8 @@ p {
     width: 400px;
     margin-top: 50px;
     text-align: center;
+}
+
+p.err-text {
+    color: var(--text-error) !important;
 }
