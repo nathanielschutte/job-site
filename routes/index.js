@@ -23,13 +23,6 @@ router.get('/home', ensureAuth, (req, res) => {
     });
 });
 
-// @route   GET /game
-router.get('/game', ensureAuth, (req, res) => {
-    res.render('game', {
-        layout: "game-layout",
-        pageName: "On the Job"
-    });
-});
 
 // // GET /unknown
 // router.get('*', (req, res) => {
