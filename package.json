@@ -4,8 +4,15 @@
   "description": "website with cool projects",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=deploy node server.js",
+    "start": "NODE_ENV=deploy node server.js",
     "dev": "cross-env NODE_ENV=dev nodemon server.js"
+  },
+  "keywords": [
+    "jobsite",
+    "heroku"
+  ],
+  "engines": {
+    "node": "14.x"
   },
   "repository": {
     "type": "git",
