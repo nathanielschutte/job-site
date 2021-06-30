@@ -8,19 +8,15 @@ router.get('/', ensureGuest, (req, res) => {
     if (req.query.failedAuth && req.query.failedAuth == 'true') {
         msg = 'Unable to continue as guest!';
     }
-    res.render('login', {
-        layout: 'login-layout',
-        message: msg
-    });
+    
+    // TODO: render this route
 });
 
 
 // @route   GET /home
 router.get('/home', ensureAuth, (req, res) => {
-    res.render('home', {
-        layout: 'main-layout',
-        pageName: "Jobsite"
-    });
+    
+    // TODO: render this route
 });
 
 

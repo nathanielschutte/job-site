@@ -2,7 +2,6 @@ const dotenv = require('dotenv');
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
-const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
@@ -15,7 +14,13 @@ if (process.env.NODE_ENV == 'dev') {
 }
 require('./config/passport')(passport);
 
-connectDB();
+
+// Lightweight run for page rendering
+const LITE = process.env.LITE == 'true';
+
+if (!LITE) {
+    connectDB();
+}
 
 // Express app
 const app = express();
@@ -40,9 +45,7 @@ app.use('/auth', require('./routes/auth'));
 app.use('/game', require('./routes/game'));
 
 // Renderer
-app.engine('.hbs', exphbs({defaultLayout: 'main', extname: 'hbs'}));
-app.set('view engine', '.hbs');
-
+app.set('view engine', 'ejs');
 
 const port = process.env.PORT || 3000;
 

@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const router = express.Router();
 const { ensureAuth } = require('../middleware/auth');
 
@@ -7,11 +8,9 @@ const { ensureAuth } = require('../middleware/auth');
 
 // @route   GET /game
 // @desc    Main game page
-router.get('/game', ensureAuth, (req, res) => {
-    res.render('game', {
-        layout: "game-layout",
-        pageName: "On the Job"
-    });
+
+router.get('/', ensureAuth, (req, res) => {
+    res.render('game');
 });
 
 module.exports = router;

@@ -1,0 +1,17 @@
+h1 {
+    color: red;
+}
+
+.canvas-container {
+    border: dotted 1px grey;
+    height: 700px;
+}
+
+#game-canvas {
+    position: relative;
+    border: dotted 1px black;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 700px;
+    height: 500px;
+}

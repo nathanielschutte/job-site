@@ -21,11 +21,6 @@ p {
     text-align: center;
 }
 
-.game-container {
-    width: 400px;
-    margin-top: 50px;
-    text-align: center;
-}
 
 p.err-text {
     color: var(--text-error) !important;
