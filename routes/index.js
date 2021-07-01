@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { ensureAuth, ensureGuest } = require('../middleware/auth');
 
+const PAGE_TODO = 'page does not yet exist! go to /game';
+
 // @route   GET /
 router.get('/', ensureGuest, (req, res) => {
     let msg = '';
@@ -10,6 +12,8 @@ router.get('/', ensureGuest, (req, res) => {
     }
     
     // TODO: render this route
+
+    res.send(PAGE_TODO);
 });
 
 
@@ -17,6 +21,8 @@ router.get('/', ensureGuest, (req, res) => {
 router.get('/home', ensureAuth, (req, res) => {
     
     // TODO: render this route
+
+    res.send(PAGE_TODO);
 });
 
 

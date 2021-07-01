@@ -68,5 +68,22 @@ function trackFps() {
 
 
 window.onload = function() {
+
+    const socketOptions = {
+        update: true,
+        transports: ['websocket'],
+
+    }
+
+    const socket = io('http://localhost:3001', socketOptions);
+
+    socket.on('connect', () => {
+        console.log('connected to server');
+    });
+
+    socket.on('hello', (data) => {
+        document.getElementById('hello-world').innerText = data;
+    });
+
     canvasSetup(CANVAS_ELEMENT);
 }
