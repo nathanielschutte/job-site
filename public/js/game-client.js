@@ -70,9 +70,14 @@ function trackFps() {
 window.onload = function() {
 
     const socketOptions = {
-        update: true,
         transports: ['websocket'],
-
+        auth: {
+            token: 'password'
+        },
+        query: {
+            'id': '2',
+            'name': 'nate'
+        }
     }
 
     const socket = io('http://localhost:3001', socketOptions);
@@ -81,8 +86,12 @@ window.onload = function() {
         console.log('connected to server');
     });
 
-    socket.on('hello', (data) => {
-        document.getElementById('hello-world').innerText = data;
+    socket.on('errormessage', (data) => {
+        console.log('socket error:', data);
+    });
+
+    socket.on('chatmessage', (data) => {
+        document.getElementById('chat-message').innerText = data;
     });
 
     canvasSetup(CANVAS_ELEMENT);
